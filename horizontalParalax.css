@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'AnekTamil';
+    src: url('./fonts/AnekTamilRegular.ttf');
+}
+@font-face {
+    font-family: 'Staatliches';
+    src: url('./fonts/StaatlichesRegular.ttf');
+}
+
+.title-font{
+    font-family: 'Staatliches';
+}
+
+.paragraph-font{
+    font-family: 'AnekTamil';
+    line-height: 22px;
+}
+
+.film-box{
+    display: flex; 
+    justify-content: flex-start;
+}
+
+.portrait{
+    display: flex; 
+    flex-direction: column;
+    cursor: pointer;
+    transition: 500ms all;
+}
+
+.portrait:hover{
+    color: yellow;
+    filter: sepia(80%);
+}
+.portrait-stage1:hover{
+    color: #ac7823;
+    filter: sepia(80%);
+}
+
+.description-box{
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 44px);
+    width: 0px;
+    background: #fffad3;
+    border-radius: 0px 12px 12px 0px;
+    transition-property: width;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+    color: #000000;
+}
+
+.description-titles{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.description-paragraph{
+    margin-top: 3px;
+    display: inline-block;
+}
+
+.poster-box{
+    margin: auto; 
+    margin-top: 20px;
+}
+
+.poster{
+    width: 100%;
+    height: 175px;
+}
+
+.film-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: #fffff4; */
+    background-color: #000000; 
+    color: white;
+    overscroll-behavior: none;
+}
+
+main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vw;
+}
+
+.slider-inner{
+    height: 100vh;
+    padding-top: 6vh;
+    width: 100%;
+    padding-bottom: 14vh; 
+    display: flex;
+    justify-content: flex-start;
+    gap: 125px;
+}
+
+.main-stage{
+    gap: 0px;
+    padding-right: 0px;
+}
+
+.stage0{
+    width: auto;
+    padding-right: 125px;
+    padding-left: 75px;
+}
+
+.stage1{
+    width: auto;
+    padding-right: 125px;
+    padding-left: 75px;
+}
+
+.stage2{
+    width: auto;
+    padding-right: 0px;
+    padding-left: 75px;
+}
+
+.main-image{
+    height: 100vh; 
+    position: relative;
+}
+
+.main-gradient{
+    width: 23vw;
+    position: absolute;
+    right: -1px;
+    height: 100vh;
+    background: linear-gradient(270deg, black, transparent);
+}
+
+#main-line1{
+    position: absolute;
+    border-right: 1px solid white;
+    width: 22vh;
+    height: 0vh;
+    transition-duration: 1200ms;
+    transition-property: height;
+    transition-timing-function: ease-in-out;
+}
+
+#main-line2{
+    position: absolute;
+    border-right: 1px solid white;
+    width: 79vh;
+    height: 0vh;
+    bottom: 0;
+    transition-duration: 800ms;
+    transition-property: height;
+    transition-timing-function: ease-in-out;
+}
+
+#main-line3{
+    position: absolute;
+    border-right: 1px solid white;
+    width: 90vh;
+    height: 0vh;
+    transition-duration: 900ms;
+    transition-property: height;
+    transition-timing-function: ease-in-out;
+}
+
+#main-line4{
+    position: absolute;
+    border-bottom: 1px solid white;
+    width: 0vh;
+    height: 41vh;
+    right: 0;
+    transition-duration: 1100ms;
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+}
+
+#main-title1, #main-title2, #main-title3{
+    position: absolute;
+    font-family: 'Staatliches';
+    border-right: 1px solid white;
+    margin-left: -750px;
+    transition-property: margin-left;
+    transition-timing-function: ease-in-out;
+}
+
+#main-title1{
+    font-size: 9vw;
+    padding-top: 3vh;
+    transition-duration: 1200ms;
+}
+#main-title2{
+    font-size: 9vw;
+    padding-top: 3vh;
+    transition-duration: 1400ms;
+    top: 8vw;
+}
+#main-title3{
+    font-size: 4vw;
+    transition-duration: 1600ms;
+    top: 28vw;
+}
+
+@media screen and(max-width: 1400px){
+    #main-title1, #main-title2{
+        font-size: 120px;
+    }
+    #main-title2{
+        top: 100px;
+    }
+    #main-title3{
+        font-size: 40px;
+        top: 400px;
+    }
+}
+
+.author-box{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    max-width: 680px; 
+    min-width: 400px; 
+    height: 100vh; 
+    border-right: 1px solid #ccc; 
+    padding: 6vh 50px 40px 40px;
+}
+
+.stage-box{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    max-width: 680px; 
+    min-width: 400px; 
+    height: 100vh; 
+    margin-top: 3vh;
+}
+
+.item{
+    position: relative;
+    width: 450px;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.img{
+    position: absolute;
+    left: -284px;
+    width: 600px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* filter: grayscale(100%); */
+}

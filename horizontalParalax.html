@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="horizontalParalax.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+    <main>
+        <div class="slider">
+
+            <!-- Main slider -->
+            <div class="slider-inner main-stage" style="padding-top: 0vh">
+
+                <!-- Image background -->
+                <div class="main-image">
+                    <div id="main-line1"></div>
+                    <div id="main-line2"></div>
+                    <div id="main-line3"></div>
+                    <div id="main-line4"></div>
+                    <div id="main-title1">Stanley</div>
+                    <div id="main-title2">Kubrik</div>
+                    <div id="main-title3">Filmography</div>
+                    <div class="main-gradient"></div>
+                    <img style="height: 100%" src="./images/main.jpg" alt="">
+                </div>
+                <div style="width: 15vw; background: black"></div>
+
+                <!-- Author section -->
+                <div class="author-box">
+                    <div style="display: flex; justify-content: space-between">
+                        <div><span class="paragraph-font" style="font-weight: bold">Stanley Kubrik</span></div>
+                        <div style="width: 170px; height: auto;">
+                            <img style="width: 100%" src="./images/kubrik.jpg">
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 50px">
+                        <span class="title-font" style="display: block; font-size: 32px; margin-bottom: 25px">Born in 1928</span>
+                        <p style="font-family: AnekTamil;">
+                            A demanding perfectionist, Kubrick assumed control over most aspects of the filmmaking process, 
+                            from direction and writing to editing, and took painstaking care with researching his films and staging 
+                            scenes, working in close coordination with his actors, crew, and other collaborators. He often asked for several 
+                            dozen retakes of the same shot in a movie, which resulted in many conflicts with his casts. Despite the resulting 
+                            notoriety among actors, many of Kubrick's films broke new ground in cinematography. 
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage 0 -->
+            
+                <div class="slider-inner stage0">
+                    <div class="stage-box">
+                        <div style="display: flex; flex-direction: column">
+                            <div><span class="title-font" style="font-size: 130px">Stage 0</span></div>
+                            <div><span class="title-font" style="font-size: 32px">Documentaries and first films</span></div>
+                        </div>  
+                    </div>
+
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(0)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Day of the Fight</span></div>
+                                <div><span class="paragraph-font">1951</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Day of the Fight shows Irish-American middleweight boxer Walter Cartier during the 
+                                    height of his career, on April 17, 1950, the day of a fight with middleweight Bobby James. The film 
+                                    opens with a short section on boxing's history and then follows Cartier through his day as he 
+                                    prepares for the 10 P.M. bout. Cartier eats breakfast in his West 12th Street apartment in 
+                                    Greenwich Village, goes to early mass, and eats lunch at his favorite restaurant. At 4 P.M., 
+                                    he starts preparations for the fight. By 8 P.M., he is waiting in his dressing room at Laurel 
+                                    Gardens in Newark, New Jersey, for the fight to begin.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">12m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/day-of-the-fight.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(1)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Fliyng Padre</span></div>
+                                <div><span class="paragraph-font">1951</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Flying Padre is a 1951 short subject black-and-white documentary film. 
+                                    It is the second film directed by Stanley Kubrick. The film is nine minutes 
+                                    long and was completed shortly after Kubrick had completed his first film for RKO, 
+                                    the short subject Day of the Fight (1951). 
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">9m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/flying-padre.jpeg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(2)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">The Seafarers</span></div>
+                                <div><span class="paragraph-font">1953</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    The Seafarers is Stanley Kubrick's fourth film and third short documentary, made for the Seafarers 
+                                    International Union, directed in June 1953. The film was Kubrick's first in color. There are shots of 
+                                    ships, machinery, a canteen, and a union meeting. The film was supervised by the staff of The 
+                                    Seafarers Log, the union magazine. For the cafeteria scene in the film, Kubrick chose a long, 
+                                    sideways-shooting dolly shot to establish the life of the seafarer's community; this shot is 
+                                    an early demonstration of a signature technique that Kubrick would use in his feature films. 
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">30m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/the-seafarers.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(3)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Fear and Desire</span></div>
+                                <div><span class="paragraph-font">1953</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Fear and Desire is a 1952 American anti-war film directed, produced, and edited by Stanley Kubrick, 
+                                    and written by Howard Sackler. With a production team of only fifteen people, the film was Kubrick's 
+                                    feature directorial debut. In the years following its release, Fear and Desire 
+                                    seemed to have disappeared. Distributor Joseph Burstyn died in November 1953 on a trans-Atlantic 
+                                    flight, and his company went out of business. Legend has it that Kubrick destroyed the film's 
+                                    original negative and sought to do the same to any leftover prints after the failed film fell 
+                                    out of circulation following Burstyn's death. However, some prints of the film remained in 
+                                    private collections.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">1h 2m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/fear-and-desire.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(4)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Killer's Kiss</span></div>
+                                <div><span class="paragraph-font">1955</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Killer's Kiss is a 1955 American crime film noir directed by Stanley Kubrick and written
+                                     by Kubrick and Howard Sackler. It is the second feature film directed by Kubrick, following his 
+                                     1953 debut feature Fear and Desire. The film stars Jamie Smith, Irene Kane, and Frank Silvera. The 
+                                     film is about Davey Gordon (Jamie Smith), a 29-year-old middleweight New York boxer at the end of 
+                                     his career, and his relationship with his neighbor, taxi dancer Gloria Price (Irene Kane), and her 
+                                     violent employer Vincent Rapallo (Frank Silvera).
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">1h 7mm</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/killer-kiss.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 1 -->
+
+                <div class="slider-inner stage1" style="background: rgb(255, 253, 243); color: black">
+                    <div class="stage-box">
+                        <div style="display: flex; flex-direction: column">
+                            <div><span class="title-font" style="font-size: 130px">Stage 1</span></div>
+                            <div><span class="title-font" style="font-size: 32px">Classic period, a young Stanley, in black and white</span></div>
+                        </div>  
+                    </div>
+
+                    <div class="film-box">
+                        <div class="portrait portrait-stage1" onclick="openFilmDescription(5)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">The Killing</span></div>
+                                <div><span class="paragraph-font">1956</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    The Killing is a 1956 American film noir directed by Stanley Kubrick and produced by James B. 
+                                    Harris. It was written by Kubrick and Jim Thompson and based on Lionel White's novel Clean Break. 
+                                    It stars Sterling Hayden, Coleen Gray, and Vince Edwards, and features Marie Windsor, Elisha Cook 
+                                    Jr., Jay C. Flippen and Timothy Carey.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">1h 25m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/the-killing.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait portrait-stage1" onclick="openFilmDescription(6)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Paths of Glory</span></div>
+                                <div><span class="paragraph-font">1957</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Paths of Glory is a 1957 American anti-war film co-written and directed by Stanley Kubrick, 
+                                    based on the novel of the same name by Humphrey Cobb. Set during World War I, the film 
+                                    stars Kirk Douglas as Colonel Dax, the commanding officer of French soldiers who refuse 
+                                    to continue a suicidal attack, after which Dax attempts to defend them against charges 
+                                    of cowardice in a court-martial.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">1h 28m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/paths-of-glory.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait portrait-stage1" onclick="openFilmDescription(7)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Spartacus</span></div>
+                                <div><span class="paragraph-font">1960</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Spartacus is a 1960 American epic historical drama film directed by Stanley Kubrick, written by Dalton 
+                                    Trumbo, and based on the 1951 novel of the same title by Howard Fast. It is inspired by the life story
+                                     of Spartacus, the leader of a slave revolt in antiquity, and the events of the Third Servile War.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">3h 17m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/spartacus.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait portrait-stage1" onclick="openFilmDescription(8)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Lolita</span></div>
+                                <div><span class="paragraph-font">1962</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Lolita is a 1962 psychological comedy-drama film directed by Stanley Kubrick and based on the 1955 novel
+                                     of the same title by Vladimir Nabokov, who is also credited with writing the screenplay. The film follows 
+                                     Humbert Humbert, a middle-aged literature lecturer who becomes sexually infatuated with Dolores Haze 
+                                     (nicknamed "Lolita"), a young adolescent girl. Lolita polarized contemporary critics for its controversial 
+                                     depictions of child sexual abuse. Years after its release, Kubrick expressed doubt that he would have 
+                                     attempted to make the film had he fully understood how severe the censorship limitations on it would be.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">2h 32m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/lolita.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait portrait-stage1" onclick="openFilmDescription(9)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Dr. Strangelove</span></div>
+                                <div><span class="paragraph-font">1964</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    The story concerns an unhinged United States Air Force general who orders a pre-emptive nuclear 
+                                    attack on the Soviet Union. It separately follows the President of the United States, his advisors, 
+                                    the Joint Chiefs of Staff and a Royal Air Force exchange officer as they attempt to prevent the crew 
+                                    of a B-52 (who were following orders from the general) from bombing the Soviet Union and starting a 
+                                    nuclear war.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">1h 34m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/strangelove.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+
+                <div class="slider-inner stage2" style="background: rgb(34, 85, 179); color: rgb(255, 254, 244)">
+                    <div class="stage-box">
+                        <div style="display: flex; flex-direction: column">
+                            <div><span class="title-font" style="font-size: 130px">Stage 2</span></div>
+                            <div><span class="title-font" style="font-size: 32px">Classic period, a young Stanley, in black and white</span></div>
+                        </div>  
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(10)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">2001: A Space Odyssey</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    2001: A Space Odyssey is a 1968 epic science fiction film produced and directed by Stanley Kubrick. The film is noted for 
+                                    its scientifically accurate depiction of space flight, pioneering special effects, and ambiguous 
+                                    imagery. Kubrick avoided conventional cinematic and narrative techniques; dialogue is used sparingly, 
+                                    and there are long sequences accompanied only by music. The soundtrack incorporates numerous works of 
+                                    classical music, by composers including Richard Strauss, Johann Strauss II, Aram Khachaturian, 
+                                    and György Ligeti.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">2h 23m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/2001.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(11)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Clockwork Orange</span></div>
+                                <div><span class="paragraph-font">1971</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    A Clockwork Orange is a 1971 dystopian crime film adapted, produced, and directed by 
+                                    Stanley Kubrick, based on Anthony Burgess's 1962 novel of the same name. It employs disturbing, 
+                                    violent images to comment on psychiatry, juvenile delinquency, youth gangs, and other social, 
+                                    political, and economic subjects in a dystopian near-future Britain. The film was met with polarised 
+                                    reviews from critics and was controversial due to its depictions of graphic violence. After 
+                                    it was cited as having inspired copycat acts of violence, the film was withdrawn from 
+                                    British cinemas at Kubrick's behest, and it was also banned in several other countries.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">2h 16m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/clockwork.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(12)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Barry Lyndon</span></div>
+                                <div><span class="paragraph-font">1975</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Barry Lyndon is a 1975 period drama film written, directed, and produced by Stanley Kubrick, 
+                                    based on the 1844 novel The Luck of Barry Lyndon that recounts the early exploits and later unravelling of a 
+                                    fictional 18th-century Irish rogue and opportunist who marries a rich widow to climb the social ladder and 
+                                    assume her late husband's aristocratic position.
+                                    The film's cinematography has been described as ground-breaking. Especially notable are the long double 
+                                    shots, usually ended with a slow backwards zoom, the scenes shot entirely in candlelight, and the
+                                     settings based on William Hogarth paintings.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">3h 7m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/barry-lyndon.png" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(13)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">The Shining</span></div>
+                                <div><span class="paragraph-font">1980</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and 
+                                    co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of 
+                                    the same name. The film's central character is Jack Torrance (Nicholson), an aspiring writer and recovering 
+                                    alcoholic who accepts a position as the off-season caretaker of the isolated historic Overlook 
+                                    Hotel in the Colorado Rockies, with his wife, Wendy Torrance, and young son, Danny 
+                                    Torrance. Danny is gifted with psychic abilities named "shining". After a winter storm 
+                                    leaves the Torrances snowbound, Jack's sanity deteriorates due to the influence of the supernatural 
+                                    forces that inhabit the hotel.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">1h 59m (European version)</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/the-shining.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(14)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Full Metal Jacket</span></div>
+                                <div><span class="paragraph-font">1987</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    The storyline follows a platoon of U.S. Marines through their boot camp training in Marine Corps 
+                                    Recruit Depot Parris Island, South Carolina, primarily focusing in the first half of the film 
+                                    on privates J.T. Davis and Leonard Lawrence, nicknamed Joker and Pyle, who struggle under 
+                                    their abusive drill instructor Gunnery Sergeant Hartman. The second half portrays the experiences 
+                                    of Joker and one other of the platoon's Marines in Vietnamese cities Da Nang and Huế during the Tet 
+                                    Offensive of the Vietnam War. The film's title refers to the full metal jacket bullet used by military 
+                                    servicemen.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">1h 56m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/full-metal-jacket.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="film-box">
+                        <div class="portrait" onclick="openFilmDescription(15)">
+                            <div class="item">
+                                <div class="img"></div>
+                            </div>
+                            <div class="film-title">
+                                <div><span class="paragraph-font">Eyes Wide Shut</span></div>
+                                <div><span class="paragraph-font">1999</span></div>
+                            </div>
+                        </div>
+
+                        <div class="description-box paragraph-font">
+                            <div style="padding: 30px">
+                                <span class="description-titles">Synopsis:</span>
+                                <div class="description-paragraph">
+                                    Eyes Wide Shut is a 1999 erotic mystery psychological drama film directed, 
+                                    produced, and co-written by Stanley Kubrick. It is based on the 1926 novella 
+                                    Traumnovelle (Dream Story) by Arthur Schnitzler, transferring the story's setting 
+                                    from early twentieth-century Vienna to 1990s New York City. The plot centers on 
+                                    a doctor (Tom Cruise) who is shocked when his wife (Nicole Kidman) reveals that 
+                                    she had contemplated having an affair a year earlier. He then embarks on a 
+                                    night-long adventure, during which he infiltrates a masked orgy of an unnamed 
+                                    secret society.
+                                </div>
+                            </div>
+                            <div style="padding-left: 30px">
+                                <span class="description-titles">Duration:</span>
+                                <div class="description-paragraph">2h 39m</div>
+                            </div>
+                            <div class="poster-box">
+                                <div class="poster"><img src="./images/eyes-wide-shut.jpg" alt="" style="height: 100%; width: auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 150px; background: rgb(34 85 179)"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- <div style="display: flex; flex-direction: row; justify-content: flex-start; width: 200vw; height: 100vh">
+        <div style="display: flex; flex-direction: column; justify-content: space-between; width: 40vw; height: 100%; border-right: 1px solid #ccc; padding: 40px">
+            <div style="display: flex; justify-content: space-between">
+                <div><span class="paragraph-font" style="font-weight: bold">Stanley Kubrik</span></div>
+                <div style="width: 170px; height: auto;">
+                    <img style="width: 100%" src="./images/1.jpg">
+                </div>
+            </div>
+            <div>
+                <span class="title-font" style="display: block; font-size: 32px; margin-bottom: 25px">Born in 1928</span>
+                <p style="font-family: AnekTamil;">
+                    A demanding perfectionist, Kubrick assumed control over most aspects of the filmmaking process, 
+                    from direction and writing to editing, and took painstaking care with researching his films and staging 
+                    scenes, working in close coordination with his actors, crew, and other collaborators. He often asked for several 
+                    dozen retakes of the same shot in a movie, which resulted in many conflicts with his casts. Despite the resulting 
+                    notoriety among actors, many of Kubrick's films broke new ground in cinematography. 
+                </p>
+            </div>
+        </div>
+
+        <div style="padding: 40px; width: 30vw;">
+            <div style="width: 500px; height: auto;">
+                <img style="width: 100%" src="./images/2.jpg" alt="">
+            </div>
+            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
+        </div>
+        <div style="padding: 40px; width: 30vw;">
+            <div style="width: 500px; height: auto;">
+                <img style="width: 100%" src="./images/3.jpg" alt="">
+            </div>
+            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
+        </div>
+        <div style="padding: 40px; width: 30vw;">
+            <div style="width: 500px; height: auto;">
+                <img style="width: 100%" src="./images/4.jpg" alt="">
+            </div>
+            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
+        </div>
+        <div style="padding: 40px; width: 30vw;">
+            <div style="width: 500px; height: auto;">
+                <img style="width: 100%" src="./images/5.jpg" alt="">
+            </div>
+            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
+        </div>
+    </div> -->
+    <script type="text/javascript" src="horizontalParalax.js"></script>
+</body>
