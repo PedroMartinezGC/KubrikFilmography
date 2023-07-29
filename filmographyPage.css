@@ -121,19 +121,19 @@ main{
     padding-right: 0px;
 }
 
-.stage0{
+#stage0{
     width: auto;
     padding-right: 125px;
     padding-left: 75px;
 }
 
-.stage1{
+#stage1{
     width: auto;
     padding-right: 125px;
     padding-left: 75px;
 }
 
-.stage2{
+#stage2{
     width: auto;
     padding-right: 0px;
     padding-left: 75px;
@@ -201,6 +201,47 @@ main{
     margin-left: -750px;
     transition-property: margin-left;
     transition-timing-function: ease-in-out;
+}
+
+#stage-line-marker{
+    position: absolute;
+    width: 0px;
+    height: 4vh;
+    gap: -1px;
+    bottom: 4vh;
+    transition-property: width;
+    transition-duration: 600ms;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#stage-line-marker-line{
+    display: flex;
+    background-color: white;
+    /* transition: 300ms ease-in all; */
+    justify-content: flex-end;
+    width: 101%;
+    flex-direction: row;
+    align-items: center;
+}
+
+#stage-line-marker-line span{
+    font-size: 35px;
+    color: black;
+    padding-right: 5px;
+    line-height: 37px;
+    transition: 300ms ease-in all;
+}
+
+#stage-line-marker-shape {
+    width: 0;
+    height: 0;
+    border-bottom: 37px solid white;
+    border-right: 50px solid transparent;
+    transform: rotate(0);
 }
 
 #main-title1{

@@ -20,6 +20,12 @@
                     <div id="main-line2"></div>
                     <div id="main-line3"></div>
                     <div id="main-line4"></div>
+                    <div id="stage-line-marker">
+                        <div id="stage-line-marker-line">
+                            <span class="title-font">Stage 0</span>
+                        </div>
+                        <div id="stage-line-marker-shape"></div>
+                    </div>
                     <div id="main-title1">Stanley</div>
                     <div id="main-title2">Kubrik</div>
                     <div id="main-title3">Filmography</div>
@@ -29,7 +35,7 @@
                 <div style="width: 15vw; background: black"></div>
 
                 <!-- Author section -->
-                <div class="author-box">
+                <div class="author-box" id="author-box">
                     <div style="display: flex; justify-content: space-between">
                         <div><span class="paragraph-font" style="font-weight: bold">Stanley Kubrik</span></div>
                         <div style="width: 170px; height: auto;">
@@ -50,7 +56,7 @@
 
                 <!-- Stage 0 -->
             
-                <div class="slider-inner stage0">
+                <div class="slider-inner" id="stage0">
                     <div class="stage-box">
                         <div style="display: flex; flex-direction: column">
                             <div><span class="title-font" style="font-size: 130px">Stage 0</span></div>
@@ -93,7 +99,7 @@
                     </div>
                     
                     <div class="film-box">
-                        <div class="portrait" onclick="openFilmDescription(1)">
+                        <div class="portrait" onclick="openFilmDescription(1)" id="fliyng-padre">
                             <div class="item">
                                 <div class="img"></div>
                             </div>
@@ -227,7 +233,7 @@
 
                 <!-- Stage 1 -->
 
-                <div class="slider-inner stage1" style="background: rgb(255, 253, 243); color: black">
+                <div class="slider-inner" id="stage1" style="background: rgb(255, 253, 243); color: black">
                     <div class="stage-box">
                         <div style="display: flex; flex-direction: column">
                             <div><span class="title-font" style="font-size: 130px">Stage 1</span></div>
@@ -396,7 +402,7 @@
 
                 <!-- Stage 2 -->
 
-                <div class="slider-inner stage2" style="background: rgb(34, 85, 179); color: rgb(255, 254, 244)">
+                <div class="slider-inner" id="stage2" style="background: rgb(34, 85, 179); color: rgb(255, 254, 244)">
                     <div class="stage-box">
                         <div style="display: flex; flex-direction: column">
                             <div><span class="title-font" style="font-size: 130px">Stage 2</span></div>
@@ -615,50 +621,5 @@
         </div>
     </main>
 
-    <!-- <div style="display: flex; flex-direction: row; justify-content: flex-start; width: 200vw; height: 100vh">
-        <div style="display: flex; flex-direction: column; justify-content: space-between; width: 40vw; height: 100%; border-right: 1px solid #ccc; padding: 40px">
-            <div style="display: flex; justify-content: space-between">
-                <div><span class="paragraph-font" style="font-weight: bold">Stanley Kubrik</span></div>
-                <div style="width: 170px; height: auto;">
-                    <img style="width: 100%" src="./images/1.jpg">
-                </div>
-            </div>
-            <div>
-                <span class="title-font" style="display: block; font-size: 32px; margin-bottom: 25px">Born in 1928</span>
-                <p style="font-family: AnekTamil;">
-                    A demanding perfectionist, Kubrick assumed control over most aspects of the filmmaking process, 
-                    from direction and writing to editing, and took painstaking care with researching his films and staging 
-                    scenes, working in close coordination with his actors, crew, and other collaborators. He often asked for several 
-                    dozen retakes of the same shot in a movie, which resulted in many conflicts with his casts. Despite the resulting 
-                    notoriety among actors, many of Kubrick's films broke new ground in cinematography. 
-                </p>
-            </div>
-        </div>
-
-        <div style="padding: 40px; width: 30vw;">
-            <div style="width: 500px; height: auto;">
-                <img style="width: 100%" src="./images/2.jpg" alt="">
-            </div>
-            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
-        </div>
-        <div style="padding: 40px; width: 30vw;">
-            <div style="width: 500px; height: auto;">
-                <img style="width: 100%" src="./images/3.jpg" alt="">
-            </div>
-            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
-        </div>
-        <div style="padding: 40px; width: 30vw;">
-            <div style="width: 500px; height: auto;">
-                <img style="width: 100%" src="./images/4.jpg" alt="">
-            </div>
-            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
-        </div>
-        <div style="padding: 40px; width: 30vw;">
-            <div style="width: 500px; height: auto;">
-                <img style="width: 100%" src="./images/5.jpg" alt="">
-            </div>
-            <span class="paragraph-font" style="display: block; font-weight: bold;">Barry Lyndon 1975</span>
-        </div>
-    </div> -->
     <script type="text/javascript" src="filmographyPage.js"></script>
 </body>
