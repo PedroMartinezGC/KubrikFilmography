@@ -1,58 +1,13 @@
-
-
 // Horizontal page movement
-
 let images = [...document.querySelectorAll('.img')];
 let slider = document.querySelector('.slider');
 let sliderWidth;
 let imageWidth;
 let current = 0;
-let target = 0;
-let ease = .05;
+let target  = 0;
+let ease    = .05;
 
-images.forEach((img, index) => {
-    img.style.backgroundImage = `url(./images/${index + 1}.jpg)`;
-});
-
-function lerp(start, end, t){
-    return start * (1 - t) + end * t;
-}
-
-function setTransform(el, transform){
-    el.style.transform = transform;
-}
-
-function init(){
-    sliderWidth = slider.getBoundingClientRect().width;
-    imageWidth = sliderWidth / images.length;
-    document.body.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`
-}
-
-// Horizontall scroll
-function animate(){
-    current = parseFloat(lerp(current, target, ease)).toFixed(2);
-    target = window.scrollY;
-    setTransform(slider, `translateX(-${current}px)`);
-    animateImages();
-    requestAnimationFrame(animate);
-}
-
-// Parallax effect
-function animateImages(){ 
-    let ratio = current / imageWidth;
-    let intersectionRatioValue;
-
-    images.forEach((image, index)=>{
-        intersectionRatioValue = ratio - (index * 0.7);
-        setTransform(image, `translateX(${intersectionRatioValue * 70}px)`);
-    });
-}
-
-init();
-animate();
-animateStageLineMarker();
-
-// Single elements
+// Single HTML elements
 let mainLine1               = document.getElementById('main-line1');
 let mainLine2               = document.getElementById('main-line2');
 let mainLine3               = document.getElementById('main-line3');
@@ -70,16 +25,64 @@ let stage1                  = document.getElementById('stage1');
 let stage2                  = document.getElementById('stage2');
 let mainSlider              = document.querySelector('.main-stage');
 
-// Multiple elements
-let filmsDescriptions = [...document.querySelectorAll('.description-box')];
+// Multiple HTML elements
+let filmsDescriptions       = [...document.querySelectorAll('.description-box')];
 let portraitHorizontalLines = [...document.querySelectorAll('.portrait-horizontal-line')]
-let portraitVerticalLines = [...document.querySelectorAll('.portrait-vertical-line')]
+let portraitVerticalLines   = [...document.querySelectorAll('.portrait-vertical-line')]
 
 // Scroll listeners
-let currentScroll = 0;
+let currentScroll     = 0;
 let authorBoxPosition = 0;
 
-showTitleAnimation();
+setPageWithParallaxEffect();
+
+function setPageWithParallaxEffect(){
+    setImages();
+    initSlider();
+    animateSmoothScroll();
+    animateStageLineMarker();
+    showTitleAnimation();
+}
+
+function setImages(){
+    images.forEach((img, index) => {
+        img.style.backgroundImage = `url(./images/${index + 1}.jpg)`;
+    });
+}
+
+function lerp(start, end, t){
+    return start * (1 - t) + end * t;
+}
+
+function setTransform(el, transform){
+    el.style.transform = transform;
+}
+
+function initSlider(){
+    sliderWidth = slider.getBoundingClientRect().width;
+    imageWidth = sliderWidth / images.length;
+    document.body.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`
+}
+
+// Horizontall scroll
+function animateSmoothScroll(){
+    current = parseFloat(lerp(current, target, ease)).toFixed(2);
+    target = window.scrollY;
+    setTransform(slider, `translateX(-${current}px)`);
+    animateImages();
+    requestAnimationFrame(animateSmoothScroll);
+}
+
+// Parallax effect
+function animateImages(){ 
+    let ratio = current / imageWidth;
+    let intersectionRatioValue;
+
+    images.forEach((image, index)=>{
+        intersectionRatioValue = ratio - (index * 0.7);
+        setTransform(image, `translateX(${intersectionRatioValue * 70}px)`);
+    });
+}
 
 function showTitleAnimation(){
     mainLine1.style.height = '80vh';
@@ -97,10 +100,10 @@ function showTitleAnimation(){
 
 function animatePortraitLines(filmIndex, isHovered){
     if( !isHovered ){
-        portraitHorizontalLines[filmIndex].style.width   = '0px';
+        portraitHorizontalLines[filmIndex].style.width = '0px';
         portraitVerticalLines[filmIndex].style.height  = '0px';
     }else {
-        portraitHorizontalLines[filmIndex].style.width   = '400px';
+        portraitHorizontalLines[filmIndex].style.width = '400px';
         portraitVerticalLines[filmIndex].style.height  = '620px';
     }
 }
@@ -124,8 +127,6 @@ function openFilmDescription(filmIndex){
         filmDescription.style.width = '1px';
         filmDescription.style.borderRight = '1px solid transparent';
     }
-    console.log(mainSliderWidth + 'px')
-    console.log((mainSliderWidth + 500) + 'px')
     let newWidth = ( mainSliderWidth + 500 ) + 'px';
     slider.style.width = newWidth;
     slider.style.paddingRight = '500px';   
@@ -148,36 +149,15 @@ function animateStageLineMarker(){
 
         // Check author box position
         const targetElement = document.getElementById('author-box');
-        authorBoxPosition = targetElement.getBoundingClientRect();
+        authorBoxPosition   = targetElement.getBoundingClientRect();
 
         //Compare currentScroll with authorBox position, for check if it already passed away
         stageLineMarker.style.width = (authorBoxPosition.x < currentScroll && !isAuthorBoxIntersecting) ? (currentScroll + window.innerWidth/4)+'px' : '0px';
 
         //Colorize
-        if(checkIntersectionBetweenElements(stageLineMarker, stage0)){
-            console.log('stage0')
-            colorizeStageLineMarker('white', 'black', 'Stage 0');
-        } 
-        if(checkIntersectionBetweenElements(stageLineMarker, stage1)) {
-            console.log('stage1')
-            colorizeStageLineMarker('black', 'white', 'Stage 1');
-        } 
-        if(checkIntersectionBetweenElements(stageLineMarker, stage2)) {
-            console.log('stage2')
-            colorizeStageLineMarker('white', 'rgb(34, 85, 179)', 'Stage 2');
-        }
-
-        /* let stageLineMarkerPosition = stageLineMarker.getBoundingClientRect();
-        let stage0Position = stage0.getBoundingClientRect();
-        let stage1Position = stage1.getBoundingClientRect();
-        let stage2Position = stage2.getBoundingClientRect();
-        
-        console.log(stage1Position.right, 'stage1Right')
-        console.log(stageLineMarkerPosition.right, 'lineRight')
-
-        //let intersects = !(stageLineMarkerPosition.right < stage0Position.right || div1Rect.top > div2Rect.bottom);
-        let intersects = (stageLineMarkerPosition.right > stage1Position.left && stage1Position.right > stageLineMarkerPosition.right)
-        if(intersects) console.log('INTERSECTION') */
+        if(checkIntersectionBetweenElements(stageLineMarker, stage0)) colorizeStageLineMarker('white', 'black', 'Stage 0');
+        if(checkIntersectionBetweenElements(stageLineMarker, stage1)) colorizeStageLineMarker('black', 'white', 'Stage 1');
+        if(checkIntersectionBetweenElements(stageLineMarker, stage2)) colorizeStageLineMarker('white', 'rgb(34, 85, 179)', 'Stage 2');
     });
 }
 
@@ -211,7 +191,6 @@ function isElementIntersecting(id){
         }
       });
     });
-
     // Start observing the target element
     observer.observe(targetElement);
   });

@@ -103,7 +103,6 @@
 }
 
 body{
-    /* background-color: #fffff4; */
     background-color: #000000; 
     color: white;
     overscroll-behavior: none;
@@ -250,7 +249,6 @@ main{
 #stage-line-marker-line{
     display: flex;
     background-color: white;
-    /* transition: 300ms ease-in all; */
     justify-content: flex-end;
     width: 101%;
     flex-direction: row;
@@ -329,7 +327,6 @@ main{
     width: 450px;
     height: 100%;
     overflow: hidden;
-    /* background-color: red; */
 }
 
 .img{
@@ -339,5 +336,4 @@ main{
     height: 100%;
     background-size: cover;
     background-position: center;
-    /* filter: grayscale(100%); */
 }
