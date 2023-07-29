@@ -22,6 +22,7 @@
 }
 
 .portrait{
+    position: relative;
     display: flex; 
     flex-direction: column;
     cursor: pointer;
@@ -31,10 +32,30 @@
 .portrait:hover{
     color: yellow;
     filter: sepia(80%);
+    scale: 1.03;
+
 }
 .portrait-stage1:hover{
     color: #ac7823;
     filter: sepia(80%);
+}
+
+.portrait-horizontal-line{
+    position: absolute;
+    width: 0px;
+    transition: width 400ms ease-in-out;
+    height: 1px;
+    background: white;
+    bottom: 150px;
+}
+
+.portrait-vertical-line{
+    position: absolute;
+    width: 1px;
+    height: 0px;
+    transition: height 400ms ease-in-out;
+    background: white;
+    left: 80%;
 }
 
 .description-box{
@@ -42,13 +63,11 @@
     flex-direction: column;
     height: calc(100% - 44px);
     width: 0px;
-    background: #fffad3;
     border-radius: 0px 12px 12px 0px;
-    transition-property: width;
-    transition-duration: 800ms;
-    transition-timing-function: ease-in-out;
+    transition: width 800ms ease-in-out, border-right-color 800ms ease-in-out;
     overflow: hidden;
-    color: #000000;
+    color: #ffffff;
+    border-right: 1px solid transparent;
 }
 
 .description-titles{
@@ -131,6 +150,16 @@ main{
     width: auto;
     padding-right: 125px;
     padding-left: 75px;
+}
+
+#stage0 .description-box{
+    color: white;
+}
+#stage1 .description-box{
+    color: black;
+}
+#stage2 .description-box{
+    color: white;
 }
 
 #stage2{

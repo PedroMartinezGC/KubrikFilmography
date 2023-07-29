@@ -52,8 +52,7 @@ init();
 animate();
 animateStageLineMarker();
 
-// Main page lines
-
+// Single elements
 let mainLine1               = document.getElementById('main-line1');
 let mainLine2               = document.getElementById('main-line2');
 let mainLine3               = document.getElementById('main-line3');
@@ -65,9 +64,16 @@ let stageLineMarkerShape    = document.getElementById('stage-line-marker-shape')
 let mainTitle1              = document.getElementById('main-title1');
 let mainTitle2              = document.getElementById('main-title2');
 let mainTitle3              = document.getElementById('main-title3');
-let stage0                  =document.getElementById('stage0');
-let stage1                  =document.getElementById('stage1');
-let stage2                  =document.getElementById('stage2');
+let portrait                = document.querySelector('.portrait');
+let stage0                  = document.getElementById('stage0');
+let stage1                  = document.getElementById('stage1');
+let stage2                  = document.getElementById('stage2');
+let mainSlider              = document.querySelector('.main-stage');
+
+// Multiple elements
+let filmsDescriptions = [...document.querySelectorAll('.description-box')];
+let portraitHorizontalLines = [...document.querySelectorAll('.portrait-horizontal-line')]
+let portraitVerticalLines = [...document.querySelectorAll('.portrait-vertical-line')]
 
 // Scroll listeners
 let currentScroll = 0;
@@ -89,22 +95,34 @@ function showTitleAnimation(){
     }, 1300);
 }
 
-// Films boxes
-let filmsDescriptions = [...document.querySelectorAll('.description-box')];
-
-let mainSlider = document.querySelector('.main-stage');
+function animatePortraitLines(filmIndex, isHovered){
+    if( !isHovered ){
+        portraitHorizontalLines[filmIndex].style.width   = '0px';
+        portraitVerticalLines[filmIndex].style.height  = '0px';
+    }else {
+        portraitHorizontalLines[filmIndex].style.width   = '400px';
+        portraitVerticalLines[filmIndex].style.height  = '620px';
+    }
+}
 
 function openFilmDescription(filmIndex){
     let filmDescription         = filmsDescriptions[filmIndex];
     let filmDescriptionWidth    = getComputedStyle(filmsDescriptions[filmIndex]).getPropertyValue('width');
-    let mainSliderWidth               = mainSlider.getBoundingClientRect().width;
+    let mainSliderWidth         = mainSlider.getBoundingClientRect().width;
 
-    if( filmDescriptionWidth == '0px' ){
+    if( filmDescriptionWidth == '1px' ){
+        let borderColor;
 
-        filmsDescriptions.forEach( ( description )=> { description.style.width = '0px' });
+        filmsDescriptions.forEach( ( description )=> { 
+            description.style.width = '1px';
+            borderColor = description.style.color;
+        });
+        
         filmDescription.style.width = '400px';
+        filmDescription.style.borderRight = '1px solid ' + borderColor;
     }else{
-        filmDescription.style.width = '0px';
+        filmDescription.style.width = '1px';
+        filmDescription.style.borderRight = '1px solid transparent';
     }
     console.log(mainSliderWidth + 'px')
     console.log((mainSliderWidth + 500) + 'px')
@@ -112,6 +130,8 @@ function openFilmDescription(filmIndex){
     slider.style.width = newWidth;
     slider.style.paddingRight = '500px';   
 }
+
+
 
 function animateStageLineMarker(){
     let width = 10;
